@@ -200,6 +200,70 @@
      <string/>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="0">
+      <widget class="QGroupBox" name="groupBox_18">
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLCDNumber" name="minLcd">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>6</y>
+          <width>101</width>
+          <height>35</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>16</x>
+          <y>2</y>
+          <width>211</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Min. temperature</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QGroupBox" name="groupBox_20">
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLCDNumber" name="lcdnumber_3">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>6</y>
+          <width>101</width>
+          <height>35</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QGroupBox" name="groupBox_21">
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLCDNumber" name="lcdnumber_4">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>6</y>
+          <width>101</width>
+          <height>35</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </item>
      <item row="0" column="0">
       <widget class="QGroupBox" name="groupBox_6">
        <property name="title">
@@ -208,48 +272,60 @@
        <widget class="QLCDNumber" name="maxLcd">
         <property name="geometry">
          <rect>
-          <x>350</x>
-          <y>0</y>
+          <x>340</x>
+          <y>6</y>
           <width>101</width>
+          <height>35</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>16</x>
+          <y>2</y>
+          <width>211</width>
           <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Max. temperature</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QGroupBox" name="groupBox_19">
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLCDNumber" name="lcdnumber_2">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>6</y>
+          <width>101</width>
+          <height>35</height>
          </rect>
         </property>
        </widget>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QGroupBox" name="groupBox_7">
-       <property name="title">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QGroupBox" name="groupBox_8">
-       <property name="title">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QGroupBox" name="groupBox_9">
-       <property name="title">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QGroupBox" name="groupBox_10">
-       <property name="title">
-        <string/>
-       </property>
-      </widget>
-     </item>
      <item row="5" column="0">
-      <widget class="QGroupBox" name="groupBox_11">
+      <widget class="QGroupBox" name="groupBox_22">
        <property name="title">
         <string/>
        </property>
+       <widget class="QLCDNumber" name="lcdnumber_5">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>6</y>
+          <width>101</width>
+          <height>35</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
      </item>
     </layout>
@@ -267,46 +343,106 @@
      <string/>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
-     <item row="0" column="0">
-      <widget class="QGroupBox" name="groupBox_12">
+     <item row="6" column="0">
+      <widget class="QGroupBox" name="groupBox_25">
        <property name="title">
         <string/>
        </property>
+       <widget class="QLCDNumber" name="lcdnumber_8">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>6</y>
+          <width>101</width>
+          <height>35</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QGroupBox" name="groupBox_13">
+     <item row="8" column="0">
+      <widget class="QGroupBox" name="groupBox_26">
        <property name="title">
         <string/>
        </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QGroupBox" name="groupBox_14">
-       <property name="title">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QGroupBox" name="groupBox_15">
-       <property name="title">
-        <string/>
-       </property>
+       <widget class="QLCDNumber" name="lcdnumber_9">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>6</y>
+          <width>101</width>
+          <height>35</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
      </item>
      <item row="4" column="0">
-      <widget class="QGroupBox" name="groupBox_16">
+      <widget class="QGroupBox" name="groupBox_23">
        <property name="title">
         <string/>
        </property>
+       <widget class="QLCDNumber" name="lcdnumber_6">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>6</y>
+          <width>101</width>
+          <height>35</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
      </item>
      <item row="5" column="0">
-      <widget class="QGroupBox" name="groupBox_17">
+      <widget class="QGroupBox" name="groupBox_28">
        <property name="title">
         <string/>
        </property>
+       <widget class="QLCDNumber" name="lcdnumber_11">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>6</y>
+          <width>101</width>
+          <height>35</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QGroupBox" name="groupBox_24">
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLCDNumber" name="lcdnumber_7">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>6</y>
+          <width>101</width>
+          <height>35</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QGroupBox" name="groupBox_27">
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLCDNumber" name="lcdnumber_10">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>6</y>
+          <width>101</width>
+          <height>35</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
      </item>
     </layout>

@@ -138,6 +138,7 @@ void MainWindow::onTimeout()
         float min = minTemp2.toFloat();
         qDebug() << min;
         ui->maxLcd->display(max);
+        ui->minLcd->display(min);
     }
 }
 
