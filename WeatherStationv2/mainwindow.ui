@@ -447,6 +447,19 @@
      </item>
     </layout>
    </widget>
+   <widget class="QPushButton" name="test">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>20</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TEST</string>
+    </property>
+   </widget>
    <zorder>groupBox</zorder>
    <zorder>groupBox_2</zorder>
    <zorder>groupBox_3</zorder>
@@ -455,6 +468,7 @@
    <zorder>layoutWidget</zorder>
    <zorder>groupBox_5</zorder>
    <zorder>groupBox_4</zorder>
+   <zorder>test</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

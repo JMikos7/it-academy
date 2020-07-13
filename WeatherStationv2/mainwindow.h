@@ -25,7 +25,7 @@ private slots:
     void connectArduino();
     void onTimeout();
     void disconnectArduino();
-    //void realTimeStats();
+    void realTimeStats();
 
 
 private:
@@ -43,5 +43,6 @@ private:
     QByteArray *data;
     QByteArray *data2;
     float *max_temp;
+    float *temp3;
 };
 #endif // MAINWINDOW_H

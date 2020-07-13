@@ -29,6 +29,7 @@ MainWindow::MainWindow(QWidget* parent)
     //INITIALIZATION OF A CONNECT ARDUINO FUNCTION WHEN THE BUTTON IS CLICKED
     connect(ui->connectButton, &QPushButton::clicked, this, &MainWindow::connectArduino);
     connect(ui->disconnectButton, &QPushButton::clicked, this, &MainWindow::disconnectArduino);
+    connect(ui->test, &QPushButton::clicked, this, &MainWindow::realTimeStats);
     //CHARTS OF TEMP AND HUM
 
     m_series = new QLineSeries();
@@ -37,8 +38,9 @@ MainWindow::MainWindow(QWidget* parent)
     n_timer->start();
     max_temp = 0;
 
-    //data = new QByteArray();
-    //data2 = new QByteArray();
+
+
+
 
     QChart* chart = new QChart();
     chart->legend()->hide();
@@ -65,14 +67,6 @@ MainWindow::MainWindow(QWidget* parent)
     n_chartView->chart()->axisY()->setRange(0, 100);
 }
 
-void MainWindow::disconnectArduino()
-{
-    m_timer->stop();
-    arduino->close();
-    ui->temperature->display("00.00");
-    ui->humidity->display("00.00");
-
-}
 
 
 void MainWindow::connectArduino()
@@ -108,7 +102,7 @@ void MainWindow::onTimeout()
         QString tempx = QString::fromStdString(data.toStdString());
         QString temp1 = tempx.trimmed();
         float temp2 = temp1.toFloat();
-        float temp3 = temp2;
+        temp3 = &temp2;
         //qDebug() << "Temperatura: " << temp1;
         ui->temperature->display(temp1);
         m_series->append(b, temp2);
@@ -126,27 +120,21 @@ void MainWindow::onTimeout()
         n_series->remove(b,0);
         n_chartView->chart()->axisX()->setRange(5, b);
 
-        if(*max_temp < temp3)
-        {
-            *max_temp = temp3;
-        }
-        ui->maxLcd->display(*max_temp);
+        //ui->maxLcd->display(max_temp);
 
-        /*arduino->write("maxTemp\n");
-        QByteArray maxTemp = arduino->readLine();
-        QString maxTemp1 = QString::fromStdString(maxTemp.toStdString());
-        QString maxTemp2 = maxTemp1.trimmed();
-        float max = maxTemp2.toFloat();
-        qDebug() << max;
-        arduino->write("minTemp\n");
-        QByteArray minTemp = arduino->readLine();
-        QString minTemp1 = QString::fromStdString(minTemp.toStdString());
-        QString minTemp2 = minTemp1.trimmed();
-        float min = minTemp2.toFloat();
-        qDebug() << min;
-        ui->maxLcd->display(max);
-        ui->minLcd->display(min);*/
     }
+}
+void MainWindow::disconnectArduino()
+{
+    m_timer->stop();
+    arduino->close();
+    //ui->temperature->display("00.00");
+    //ui->humidity->display("00.00");
+}
+void MainWindow::realTimeStats()
+{
+    float a =  *temp3;
+    qDebug() << a;
 }
 
 
