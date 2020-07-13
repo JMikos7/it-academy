@@ -1,0 +1,48 @@
+#include "DHT.h"
+#include <string.h>
+#include <stdlib.h>
+
+DHT dht;
+String readString;
+float maxTemp=0;
+float minTemp=99;
+
+
+void setup()
+{
+    Serial.begin(9600);
+    dht.setup(2);
+}
+
+void loop()
+{
+      if(dht.getTemperature() > maxTemp)
+    {
+      maxTemp = dht.getTemperature();
+    }
+    if(minTemp > dht.getTemperature())
+    {
+      minTemp = dht.getTemperature();
+    }
+    if (Serial.available()) {
+        char c = Serial.read();
+        if (c == '\n') {
+
+            if (readString == "temp") {
+                Serial.println(dht.getTemperature());
+            }
+            if (readString == "hum") {
+                Serial.println(dht.getHumidity());
+            }
+            if (readString == "maxTemp") {
+              Serial.println(maxTemp);
+            }
+            if (readString == "minTemp") {
+              Serial.println(minTemp);
+            }
+            readString = "";
+        }
+        else
+            readString += c;
+    }
+}
