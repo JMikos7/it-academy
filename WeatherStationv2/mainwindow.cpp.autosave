@@ -36,6 +36,10 @@ MainWindow::MainWindow(QWidget* parent)
     l_series = new QLineSeries();
     n_timer->start();
     max_temp = 0;
+    if(max_temp < temp3)
+    {
+        
+    }
 
     //data = new QByteArray();
     //data2 = new QByteArray();
@@ -126,11 +130,7 @@ void MainWindow::onTimeout()
         n_series->remove(b,0);
         n_chartView->chart()->axisX()->setRange(5, b);
 
-        if(*max_temp < temp3)
-        {
-            *max_temp = temp3;
-        }
-        ui->maxLcd->display(*max_temp);
+        //ui->maxLcd->display(max_temp);
 
         /*arduino->write("maxTemp\n");
         QByteArray maxTemp = arduino->readLine();

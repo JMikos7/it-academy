@@ -43,5 +43,6 @@ private:
     QByteArray *data;
     QByteArray *data2;
     float *max_temp;
+    float *temp3;
 };
 #endif // MAINWINDOW_H
